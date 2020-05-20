@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: davisancpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: davisancpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: davisancpipelinesjavascriptdocker 
+          image: davidazuredemosacr.azurecr.io/davisancpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
